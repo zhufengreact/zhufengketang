@@ -1,14 +1,13 @@
 import React, { Component, PropTypes } from 'react'
+import WeUI from "react-weui"
+import "weui"
+
+const {Button} = WeUI;
 
 class App extends Component {
   render(){
     return (
-      <div>
-        <h1>
-          how to use quick starter, more details see
-          https://github.com/GuoYongfeng/starter
-        </h1>
-      </div>
+     <Button size="small">Weui</Button>
     )
   }
 }
