@@ -1,13 +1,13 @@
 import React, { Component, PropTypes } from 'react'
-import WeUI from "react-weui"
-import "weui"
+//import DatePicker from 'antd/lib/date-picker';  // just for js
+//import 'antd/lib/date-picker/style/css';  // with style
+import {DatePicker} from "antd"
 
-const {Button} = WeUI;
 
 class App extends Component {
   render(){
     return (
-     <Button size="small">Weui</Button>
+     <DatePicker/>
     )
   }
 }

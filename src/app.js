@@ -1,8 +1,7 @@
 /* 入口启动文件 */
 import React from 'react'
 import { render } from 'react-dom'
-import 'react-weui/lib/react-weui.min.css'
-
+import 'antd/dist/antd.min.css'
 import App from './containers/index'
 
 if (__DEV__) {
