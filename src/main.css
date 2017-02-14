@@ -47,7 +47,7 @@ html,body{
     display:-webkit-flex;
     flex-direction:column;
     margin:0.2rem;
-    margin-bottom:75px;
+    margin-bottom:90px;
 }
 .course-desc{
     line-height:20px;
@@ -60,4 +60,11 @@ html,body{
 
 .price{
     color:#ee4339;
+}
+
+.font-active{
+    color:#108ee9;
+}
+.font-disable{
+    color:#ddd;
 }

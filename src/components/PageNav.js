@@ -7,33 +7,39 @@ import {Row, Col} from "antd"
 
 export default class PageNav extends Component{
     render(){
+        const {pathname} = this.props.location;
+        const imgs =[{path:"/",imgName:"menu-index",text:"首页"},{path:"/course",imgName:"my-course",text:"我的课程"},{path:"/setting",imgName:"user-center",text:"个人中心"}];
         return (
             <div>
                 {this.props.children}
                 <div className="bottom">
                     <Row type="flex" justify="space-around">
-                        <Col span={8}>
-                            <Link to="/">
-                                <Row><img src={require("../image/menu-index.png")} alt=""/></Row>
-                                首页
-                            </Link>
-                        </Col>
-                        <Col span={8}>
-                            <Link to="/course" >
-                                <Row>
-                                    <img src={require("../image/my-course.png")} alt=""/>
-                                </Row>
-                                我的课程
-                            </Link>
-                        </Col>
-                        <Col span={8}>
-                            <Link to="/setting">
-                                <Row>
-                                    <img src={require("../image/user-center.png")} alt=""/>
-                                </Row>
-                                个人中心
-                            </Link>
-                        </Col>
+                    {imgs.map((item)=>{
+                        return (
+                            <Col span={2} >
+                                <Link to={item.path}>
+                                {
+                                 pathname==item.path&&(
+                                    <div className="font-active">
+                                    <Row>
+                                        <img src={require("../image/"+item.imgName+".png")}/>
+                                    </Row>
+                                    {item.text}
+                                    </div>)
+                                 }
+                                {
+                                    pathname!=item.path&&(
+                                        <div className="font-disable">
+                                            <Row>
+                                                <img src={require("../image/"+item.imgName+"-gray.png")}/>
+                                            </Row>
+                                            {item.text}
+                                        </div>)
+                                }
+                                </Link>
+                            </Col>
+                        )
+                    })}
                     </Row>
                 </div>
             </div>
