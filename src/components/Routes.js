@@ -3,7 +3,7 @@
  */
 import React,{Component} from "react"
 import {Route,Router,IndexRoute,browserHistory} from "react-router"
-import {Layout,Footer} from "antd"
+
 
 import Home from "./Home"
 import Course from "./Course"

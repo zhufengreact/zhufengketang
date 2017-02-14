@@ -5,7 +5,15 @@ import React,{Component} from "react"
 import {Carousel} from "antd"
 
 export default class Home extends Component{
+    componentDidMount(){
+
+    }
+
     render(){
+        const courses=[{title:"实战珠峰课堂系列ReactNative课程",author:"Ramroll",description:"提供ReactNative基础课程，同时提供一个在Github上发售的ReactNative项目。学完基础课程，然后学如何架构一个完整的APP.",
+            price:"2000",image:"http://ketang.zhufengpeixun.cn/static/nodejs.jpg"},{title:"实战珠峰课堂系列ReactNative课程",author:"Ramroll",description:"提供ReactNative基础课程，同时提供一个在Github上发售的ReactNative项目。学完基础课程，然后学如何架构一个完整的APP.",
+            price:"2000",image:"http://ketang.zhufengpeixun.cn/static/nodejs.jpg"},{title:"实战珠峰课堂系列ReactNative课程",author:"Ramroll",description:"提供ReactNative基础课程，同时提供一个在Github上发售的ReactNative项目。学完基础课程，然后学如何架构一个完整的APP.",
+            price:"2000",image:"http://ketang.zhufengpeixun.cn/static/nodejs.jpg"}];
         return (
             <div class="home-container">
              <Carousel autoplay className="home-item1">
@@ -20,53 +28,29 @@ export default class Home extends Component{
                     <img src={require("../image/fire-all-course.png")} alt="" className="course-img"/>
                 </div>
                 <div className="course-list">
-                    <div className="course-detail">
-                        <div>
-                            <img src={require("../image/react.jpg")} alt="" className="small-img"/>
-                        </div>
-                        <div>
-                            <h4>实战&lt;珠峰课堂&gt;系列ReactNative课程</h4>
-                            <div>
-                                讲师：Ramroll
-                            </div>
-                            <div className="course-desc">
-                                提供ReactNative基础课程，同时提供一个在Github上发售的ReactNative项目。学完基础课程，然后学如何架构一个完整的APP。
-                            </div>
-                            <div className="price">&#65509;2000</div>
-                        </div>
-                    </div>
-                    <div className="course-detail">
-                        <div>
-                            <img src={require("../image/react.jpg")} alt="" className="small-img"/>
-                        </div>
-                        <div>
-                            <h4>实战&lt;珠峰课堂&gt;系列ReactNative课程</h4>
-                            <div>
-                                讲师：Ramroll
-                            </div>
-                            <div className="course-desc">
-                                提供ReactNative基础课程，同时提供一个在Github上发售的ReactNative项目。学完基础课程，然后学如何架构一个完整的APP。
-                            </div>
-                            <div className="price">&#65509;2000</div>
-                        </div>
-                    </div>
-                    <div className="course-detail">
-                        <div>
-                            <img src={require("../image/react.jpg")} alt="" className="small-img"/>
-                        </div>
-                        <div>
-                            <h4>实战&lt;珠峰课堂&gt;系列ReactNative课程</h4>
-                            <div>
-                                讲师：Ramroll
-                            </div>
-                            <div className="course-desc">
-                                提供ReactNative基础课程，同时提供一个在Github上发售的ReactNative项目。学完基础课程，然后学如何架构一个完整的APP。
-                            </div>
-                            <div className="price">&#65509;2000</div>
-                        </div>
-                    </div>
+                {
+                    courses.map((item)=>{
+                        return (
+                            <div className="course-detail">
+                                <div>
+                                    <img src={''+item.image} alt="" className="small-img"/>
+                                </div>
+                                <div>
+                                    <h4>{item.title}</h4>
+                                    <div>
+                                        讲师：{item.author}
+                                    </div>
+                                    <div className="course-desc">
+                                        {item.description}
+                                    </div>
+                                    <div className="price">&#65509;{item.price}</div>
+                                </div>
+                            </div>  
+                        )
+                    })
+                }
+               </div>
                 </div>
-            </div>
         )
     }
 }
