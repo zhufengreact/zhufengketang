@@ -19,7 +19,7 @@ export default class PageNav extends Component{
                             </Link>
                         </Col>
                         <Col span={8}>
-                            <Link to="/course">
+                            <Link to="/course" >
                                 <Row>
                                     <img src={require("../image/my-course.png")} alt=""/>
                                 </Row>

@@ -1,3 +1,8 @@
+html,body{
+    overflow-y:scroll;
+    font-size:18px;
+}
+
 .bottom{
     position:fixed;
     bottom:0;
@@ -6,4 +11,53 @@
     background:#fff;
     text-align:center;
     border-top:1px solid #777;
+}
+
+.home-container{
+    display:flex;
+    display:-webkit-flex;
+    flex-direction:column;
+    background:red;
+    height:200px;
+    width:200px;
+}
+
+.full-img{
+    width:100%;
+}
+
+.home-item2{
+    display:flex;
+    display:-webkit-flex;
+}
+.course-img{
+    flex:0 0 8%;
+}
+
+.course-list{
+    width:100%;
+    display:flex;
+    display:-webkit-flex;
+    flex-flow:row wrap;
+    justify-content:space-between;
+}
+.course-detail{
+    flex:0 1 500px;
+    display:flex;
+    display:-webkit-flex;
+    flex-direction:column;
+    margin:0.2rem;
+    margin-bottom:75px;
+}
+.course-desc{
+    line-height:20px;
+}
+
+.small-img{
+    width:100%;
+    height:7rem;
+}
+
+.price{
+    color:#ee4339;
 }

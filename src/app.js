@@ -2,8 +2,8 @@
 import React from 'react'
 import { render } from 'react-dom'
 import 'antd/dist/antd.min.css'
-import App from './containers/index'
 import "./main.css"
+import App from './containers/index'
 
 if (__DEV__) {
   console.info('[当前环境] 开发环境')
