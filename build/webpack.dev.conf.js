@@ -48,7 +48,7 @@ config.plugins.push(
   new BrowserSyncPlugin({
     host: '127.0.0.1',
     port: 9090,
-    proxy: 'http://127.0.0.1:8080/',
+    proxy: 'http://127.0.0.1:2701/',
     logConnections: false,
     notify: false
   }, {
