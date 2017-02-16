@@ -13,9 +13,7 @@ export default class Home extends Component{
         const {courses} = this.props;
         return (
             <div class="home-container">
-
                 <Carous/>
-
                 <div className="home-item2">
                     <img src={require("../image/fire-all-course.png")} alt="" className="course-img"/>
                 </div>

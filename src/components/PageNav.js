@@ -12,7 +12,7 @@ export default class PageNav extends Component{
         return (
             <div>
                 {this.props.children}
-                <div className="bottom">
+                <div className="bottom text-center">
                     <Row type="flex" justify="space-around">
                     {imgs.map((item)=>{
                         return (

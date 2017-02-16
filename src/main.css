@@ -10,7 +10,6 @@ html,body{
     width:100%;
     padding:5px;
     background:#fff;
-    text-align:center;
     border-top:1px solid #777;
 }
 
@@ -74,18 +73,43 @@ html,body{
 }
 
 .course-empty{
-    width:300px;
+    width:20vw;
     display:flex;
     flex-direction:column;
     justify-content:center;
     align-items:center;
-    margin-top:25%;
-    margin-left:40%;
+    margin-top:25vh;
+    margin-left:40vw;
 }
 
 .empty-hint{
     display:block;
     width:100%;
-    text-align:center;
     margin-top:20px;
 }
+
+.icon-img{
+    height:20px;
+}
+
+.text-center{
+    text-align:center;
+}
+
+.setting-content{
+    width:60vw;
+    margin:2vh 20vw 2vh 20vw;
+}
+
+.setting-list{
+    height:8vh;
+    min-height:25px;
+    border-bottom:1px solid #ddd;
+    line-height:8vh;
+    color:#777;
+}
+
+.setting-list:hover{
+    color:#108ee9;
+}
+
