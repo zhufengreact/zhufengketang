@@ -24,6 +24,6 @@ app.use(require('webpack-dev-middleware')(compiler, {
 // compilation error display
 app.use(require('webpack-hot-middleware')(compiler));
 
-app.listen(2701, '127.0.0.1', function(err) {
+app.listen(8080, '127.0.0.1', function(err) {
   err && console.log(err);
 });

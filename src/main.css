@@ -40,6 +40,7 @@ html,body{
     display:-webkit-flex;
     flex-flow:row wrap;
     justify-content:space-between;
+    padding:0 2rem 0 2rem;
 }
 .course-detail{
     flex:0 1 500px;
@@ -48,6 +49,8 @@ html,body{
     flex-direction:column;
     margin:0.2rem;
     margin-bottom:90px;
+    border:1px solid #ddd;
+    box-shadow:0 3px #ddd;
 }
 .course-desc{
     line-height:20px;
@@ -66,5 +69,5 @@ html,body{
     color:#108ee9;
 }
 .font-disable{
-    color:#ddd;
+    color:#777;
 }

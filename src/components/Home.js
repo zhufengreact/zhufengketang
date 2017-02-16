@@ -3,32 +3,24 @@
  */
 import React,{Component} from "react"
 import {Carousel} from "antd"
+import Carous from "./zfCarous"
 
 export default class Home extends Component{
-    componentDidMount(){
-
+    componentWillMount(){
+        this.props.fetchCourse();
     }
-
     render(){
-        const courses=[{title:"实战珠峰课堂系列ReactNative课程",author:"Ramroll",description:"提供ReactNative基础课程，同时提供一个在Github上发售的ReactNative项目。学完基础课程，然后学如何架构一个完整的APP.",
-            price:"2000",image:"http://ketang.zhufengpeixun.cn/static/nodejs.jpg"},{title:"实战珠峰课堂系列ReactNative课程",author:"Ramroll",description:"提供ReactNative基础课程，同时提供一个在Github上发售的ReactNative项目。学完基础课程，然后学如何架构一个完整的APP.",
-            price:"2000",image:"http://ketang.zhufengpeixun.cn/static/nodejs.jpg"},{title:"实战珠峰课堂系列ReactNative课程",author:"Ramroll",description:"提供ReactNative基础课程，同时提供一个在Github上发售的ReactNative项目。学完基础课程，然后学如何架构一个完整的APP.",
-            price:"2000",image:"http://ketang.zhufengpeixun.cn/static/nodejs.jpg"}];
+        const {courses} = this.props;
         return (
             <div class="home-container">
-             <Carousel autoplay className="home-item1">
-                 <div>
-                     <img src={require("../image/carous1.png")} alt="" className="full-img"/>
-                 </div>
-                 <div>
-                     <img src={require("../image/carous2.png")} alt="" className="full-img" />
-                 </div>
-             </Carousel>
+
+                <Carous/>
+
                 <div className="home-item2">
                     <img src={require("../image/fire-all-course.png")} alt="" className="course-img"/>
                 </div>
                 <div className="course-list">
-                {
+                {courses &&
                     courses.map((item)=>{
                         return (
                             <div className="course-detail">
@@ -53,4 +45,8 @@ export default class Home extends Component{
                 </div>
         )
     }
+}
+
+Home.propTypes = {
+    courses:React.PropTypes.array.isRequired
 }
