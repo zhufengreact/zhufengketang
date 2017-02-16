@@ -1,6 +1,7 @@
 html,body{
     overflow-y:scroll;
     font-size:18px;
+    height:100%;
 }
 
 .bottom{
@@ -70,4 +71,21 @@ html,body{
 }
 .font-disable{
     color:#777;
+}
+
+.course-empty{
+    width:300px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    margin-top:25%;
+    margin-left:40%;
+}
+
+.empty-hint{
+    display:block;
+    width:100%;
+    text-align:center;
+    margin-top:20px;
 }
