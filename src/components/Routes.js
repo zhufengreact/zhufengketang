@@ -10,12 +10,15 @@ import HomeContainer from "../containers/HomeContainer"
 import Course from "./Course"
 import Setting from "./Setting"
 import PageNav from "./PageNav"
-
+import About from "./About"
+import Password from "./Password"
 class Routes extends Component{
     render(){
         return (
             <Provider store={store}>
                 <Router history={browserHistory} >
+                    <Route path="/about" component={About}></Route>
+                    <Route path="/password" component={Password}></Route>
                     <Route path="/" component={PageNav}>
                         <IndexRoute component={HomeContainer}></IndexRoute>
                         <Route path="course" component={Course}></Route>

@@ -92,6 +92,13 @@ html,body{
     height:20px;
 }
 
+
+.setting-header{
+    height:35vh;
+    padding-top:7vh;
+    background:#fff url("./image/blue_bg.png");
+}
+
 .text-center{
     text-align:center;
 }
@@ -112,4 +119,35 @@ html,body{
 .setting-list:hover{
     color:#108ee9;
 }
+
+.about-header{
+    background:#082c48;
+    color:#fff;
+    font-size:30px;
+}
+
+.about-content>p{
+    margin-left:10%;
+    margin-right:10%;
+    text-indent:2em;
+    line-height:25px;
+    margin-top:10px;
+}
+
+.password-content{
+    margin-left:20vw;
+    margin-right:20vw;
+}
+
+.vcode-btn{
+    float:right;
+    width:80%;
+}
+
+.login-form-button{
+   width:60%;
+    margin-left:20%;
+}
+
+
 

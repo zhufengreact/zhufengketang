@@ -10,8 +10,8 @@ export default class Setting extends Component{
     render(){
         return (
             <div>
-                <div className="text-center">
-                    <img src={require("../image/user-center-avatar.png")} alt=""/>
+                <div className="setting-header text-center">
+                    <img src={require("../image/user-center-avatar.png")} alt="" style={{height:"20vh"}}/>
                 </div>
                 <div className="setting-content">
                     <Link to="/about">
@@ -24,7 +24,7 @@ export default class Setting extends Component{
                     <Link to="/password">
                         <Row className="setting-list">
                             <Col span={1}><img src={require("../image/password.png")} alt="" className="icon-img"/></Col>
-                            <Col span={22}>修改密码</Col>
+                            <Col span={22}>忘记密码</Col>
                             <Col span={1}><Icon type="arrow-right"/></Col>
                         </Row>
                     </Link>
