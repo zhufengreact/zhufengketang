@@ -2,7 +2,7 @@
  * Created by weimin on 17-2-12.
  */
 import React,{Component} from "react"
-import {Icon,Row,Col} from "antd"
+import {Icon,Row,Col,Button} from "antd"
 import {Link} from "react-router"
 
 
@@ -11,7 +11,8 @@ export default class Setting extends Component{
         return (
             <div>
                 <div className="setting-header text-center">
-                    <img src={require("../image/user-center-avatar.png")} alt="" style={{height:"20vh"}}/>
+                    <Row><img src={require("../image/user-center-avatar.png")} alt="" style={{height:"20vh"}}/></Row>
+                    <Row><Button size="large" className="text-primary" onClick={()=>{this.props.history.push("/login")}}>登录</Button></Row>
                 </div>
                 <div className="setting-content">
                     <Link to="/about">

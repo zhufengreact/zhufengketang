@@ -149,5 +149,13 @@ html,body{
     margin-left:20%;
 }
 
+.text-primary{
+    color:#188ae4;
+}
+
+.text-right{
+    float:right;
+}
+
 
 
