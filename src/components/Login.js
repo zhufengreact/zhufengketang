@@ -3,6 +3,7 @@
  */
 import React,{Component} from "react"
 import {Link} from "react-router"
+import LogHeader from "./LogHeader"
 import {Form,Layout,Input,Button,Row,Col,Icon} from "antd"
 const {Header,Content} = Layout
 const FormItem = Form.Item;
@@ -12,13 +13,11 @@ class LogComp extends Component{
         const {getFieldDecorator} = this.props.form;
         return (
             <div>
-                <Header className="about-header">
-                    <Row>
-                        <Link to="/setting" style={{color:"#fff"}}><Col span={1}><Icon type="arrow-left"/></Col></Link>
-                        <Col span={23}><div className="text-center">登录</div></Col>
-                    </Row>
-                </Header>
+                <LogHeader linkTo="/setting" text="登录"></LogHeader>
                 <Content className="password-content">
+                    <Row className="text-center" style={{marginTop:"30px"}}>
+                        <img src={require("../image/login.png")} alt=""/>
+                    </Row>
                     <Form style={{marginTop:"50px"}}>
                         <FormItem label="手机号">
                             {getFieldDecorator('phone', {
@@ -34,13 +33,13 @@ class LogComp extends Component{
                                 <Input/>
                             )}
                         </FormItem>
-                        <Link>前往注册</Link>
+                        <Link to="/register">前往注册</Link>
                         <FormItem>
                             <Button type="primary" htmlType="submit" className="login-form-button" size="large">
                                 登录
                             </Button>
                         </FormItem>
-                        <Link className="text-right">忘记密码？</Link>
+                        <Link to="/password" className="text-right">忘记密码？</Link>
                     </Form>
                 </Content>
             </div>

@@ -10,7 +10,7 @@ class About extends Component {
     render(){
         return (
             <div>
-                <Header className="about-header">
+                <Header className="page-header"  style={{background:"#082c48",color:"#fff"}}>
                         <Row>
                             <Link to="/setting" style={{color:"#fff"}}><Col span={1}><Icon type="arrow-left"/></Col></Link>
                             <Col span={23}><div className="text-center">关于我们</div></Col>

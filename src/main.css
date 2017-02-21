@@ -120,10 +120,11 @@ html,body{
     color:#108ee9;
 }
 
-.about-header{
-    background:#082c48;
-    color:#fff;
+.page-header{
+    background:#fff;
+    color:#108ee9;
     font-size:30px;
+    border-bottom:1px solid #ddd;
 }
 
 .about-content>p{

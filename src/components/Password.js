@@ -4,6 +4,8 @@
 import React,{Component} from "react"
 import {Link} from "react-router"
 import {Layout,Form,Input,Button,Row,Col,Icon} from "antd"
+import LogHeader from "./LogHeader"
+
 const {Header,Content} = Layout;
 const FormItem = Form.Item;
 
@@ -12,13 +14,11 @@ class FormGroup extends Component{
         const { getFieldDecorator } = this.props.form;
         return (
             <div>
-                <Header className="about-header">
-                    <Row>
-                        <Link to="/setting" style={{color:"#fff"}}><Col span={1}><Icon type="arrow-left"/></Col></Link>
-                        <Col span={23}><div className="text-center">忘记密码</div></Col>
-                    </Row>
-                </Header>
+                <LogHeader linkTo="/setting" text="忘记密码"/>
                 <Content className="password-content">
+                    <Row className="text-center" style={{marginTop:"30px"}}>
+                        <img src={require("../image/forgot-password.png")} alt=""/>
+                    </Row>
                     <Form style={{marginTop:"50px"}}>
                         <FormItem label="手机号">
                         {getFieldDecorator('phone', {

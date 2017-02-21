@@ -13,6 +13,8 @@ import PageNav from "./PageNav"
 import About from "./About"
 import Password from "./Password"
 import Login from "./Login"
+import Register from "./Register"
+
 class Routes extends Component{
     render(){
         return (
@@ -21,6 +23,7 @@ class Routes extends Component{
                     <Route path="/about" component={About}></Route>
                     <Route path="/password" component={Password}></Route>
                     <Route path="/login" component={Login}></Route>
+                    <Route path="/register" component={Register}></Route>
                     <Route path="/" component={PageNav}>
                         <IndexRoute component={HomeContainer}></IndexRoute>
                         <Route path="course" component={Course}></Route>
