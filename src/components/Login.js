@@ -9,6 +9,10 @@ const {Header,Content} = Layout
 const FormItem = Form.Item;
 
 class LogComp extends Component{
+    handleSubmit=(e)=>{
+        e.preventDefault();
+        this.props.form.validateFields();
+    }
     render(){
         const {getFieldDecorator} = this.props.form;
         return (
@@ -18,7 +22,7 @@ class LogComp extends Component{
                     <Row className="text-center" style={{marginTop:"30px"}}>
                         <img src={require("../image/login.png")} alt=""/>
                     </Row>
-                    <Form style={{marginTop:"50px"}}>
+                    <Form style={{marginTop:"50px"}} onSubmit={this.handleSubmit}>
                         <FormItem label="手机号">
                             {getFieldDecorator('phone', {
                                 rules: [{ required: true, message: '必须输入手机号' }],

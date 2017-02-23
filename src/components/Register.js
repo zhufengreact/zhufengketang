@@ -8,11 +8,9 @@ const {Header,Content} = Layout
 const FormItem = Form.Item;
 
 class RegComp extends Component{
-    handleSubmit(e){
+    handleSubmit=(e)=>{
        e.preventDefault();
-       this.props.form.validateFields((err,values)=>{
-           console.log(err)
-       })
+       this.props.form.validateFields();
     }
     render(){
         const {getFieldDecorator} = this.props.form;
@@ -23,7 +21,7 @@ class RegComp extends Component{
                     <Row className="text-center" style={{marginTop:"30px"}}>
                         <img src={require("../image/register.png")} alt=""/>
                     </Row>
-                    <Form style={{marginTop:"50px"}} onSubmit={this.handleSubmit.bind(this)}>
+                    <Form style={{marginTop:"50px"}} onSubmit={this.handleSubmit}>
                         <FormItem label="姓名">
                             {
                                 getFieldDecorator("username",{
