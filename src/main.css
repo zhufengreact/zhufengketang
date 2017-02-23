@@ -39,14 +39,15 @@ html,body{
     display:flex;
     display:-webkit-flex;
     flex-flow:row wrap;
-    justify-content:space-between;
+    justify-content:flex-start;
     padding:0 2rem 0 2rem;
 }
 .course-detail{
-    flex:0 1 500px;
+    flex:1 1 400px;
     display:flex;
     display:-webkit-flex;
     flex-direction:column;
+    max-width:30vw;
     margin:0.2rem;
     margin-bottom:90px;
     border:1px solid #ddd;
