@@ -4,8 +4,9 @@
 import React,{Component} from "react"
 import {Route,Router,IndexRoute,browserHistory} from "react-router"
 import {Provider} from "react-redux"
-import store from "../store/configureStore"
+import {syncHistoryWithStore} from "react-router-redux"
 
+import store from "../store/configureStore"
 import HomeContainer from "../containers/HomeContainer"
 import Course from "./Course"
 import Setting from "./Setting"
@@ -17,9 +18,10 @@ import Register from "./Register"
 
 class Routes extends Component{
     render(){
+        const history = syncHistoryWithStore(browserHistory,store)
         return (
             <Provider store={store}>
-                <Router history={browserHistory} >
+                <Router history={history} >
                     <Route path="/about" component={About}></Route>
                     <Route path="/password" component={Password}></Route>
                     <Route path="/login" component={Login}></Route>

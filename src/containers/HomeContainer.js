@@ -8,7 +8,7 @@ import {courseURL} from "../const/consts.js"
 
 let mapStateToProps = (state)=>{
     return {
-        courses:state.HomeReducer.courses
+        courses:state.homeReducer.courses
     }
 }
 

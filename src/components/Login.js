@@ -5,7 +5,7 @@ import React,{Component} from "react"
 import {Link} from "react-router"
 import LogHeader from "./LogHeader"
 import {Form,Layout,Input,Button,Row,Col,Icon} from "antd"
-const {Header,Content} = Layout
+const {Content} = Layout
 const FormItem = Form.Item;
 
 class LogComp extends Component{

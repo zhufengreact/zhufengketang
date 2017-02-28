@@ -2,7 +2,6 @@
  * Created by weimin on 17-2-12.
  */
 import React,{Component} from "react"
-import {Carousel} from "antd"
 import Carous from "./zfCarous"
 
 export default class Home extends Component{
